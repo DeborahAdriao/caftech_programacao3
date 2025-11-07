@@ -4,13 +4,13 @@ import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Cardapio {
+public class CardapioSingleton {
 
-    private static final Cardapio instancia = new Cardapio();
+    private static final CardapioSingleton instancia = new CardapioSingleton();
     private static final String ARQUIVO_CARDAPIO = "cardapio.dat"; //nomde do arq
     private Map<String, Double> precosItens;
 
-    private Cardapio() { //(Singleton)
+    private CardapioSingleton() { //(Singleton)
         carregarCardapio();
         if (precosItens == null) {
             System.out.println("[Cardapio] Nenhum arquivo encontrado. Criando cardápio padrão...");
@@ -19,7 +19,7 @@ public class Cardapio {
             salvarCardapio();
         }
     }
-    public static Cardapio getInstancia() { //acesso global
+    public static CardapioSingleton getInstancia() { //acesso global
         return instancia;
     }
     private void carregarCardapio() {

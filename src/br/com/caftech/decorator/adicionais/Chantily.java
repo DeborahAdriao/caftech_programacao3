@@ -1,13 +1,13 @@
 package br.com.caftech.decorator.adicionais;
 import br.com.caftech.decorator.Bebida;
-import br.com.caftech.singleton.Cardapio;
+import br.com.caftech.singleton.CardapioSingleton;
 
 public class Chantily extends AdicionalDecorator{
     private double precoAdicional;
 
     public Chantily (Bebida bebida){
         super(bebida);
-        this.precoAdicional = Cardapio.getInstancia().getPrecoItem("chantily");
+        this.precoAdicional = CardapioSingleton.getInstancia().getPrecoItem("chantily");
     }
     @Override
     public String getDescricao() {

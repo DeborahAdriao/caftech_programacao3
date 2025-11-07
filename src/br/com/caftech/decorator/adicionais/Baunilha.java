@@ -1,6 +1,6 @@
 package br.com.caftech.decorator.adicionais;
 import br.com.caftech.decorator.Bebida;
-import br.com.caftech.singleton.Cardapio;
+import br.com.caftech.singleton.CardapioSingleton;
 
 public class Baunilha extends AdicionalDecorator{
     private double precoAdicional;
@@ -8,7 +8,7 @@ public class Baunilha extends AdicionalDecorator{
     public Baunilha(Bebida bebida) {
         super(bebida);
         // CONEXÃO: Busca seu próprio preço no Cardapio
-        this.precoAdicional = Cardapio.getInstancia().getPrecoItem("baunilha");
+        this.precoAdicional = CardapioSingleton.getInstancia().getPrecoItem("baunilha");
     }
     @Override
     public String getDescricao() {
