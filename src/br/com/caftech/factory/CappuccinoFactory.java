@@ -7,7 +7,7 @@ import br.com.caftech.singleton.CardapioSingleton;
 public class CappuccinoFactory extends CafeteriaFactory {
     @Override
     public Bebida criarBebida() {
-        double preco = CardapioSingleton.getInstancia().getPrecoItem("cappuccino");
+        double preco = CardapioSingleton.getInstancia().getPrecoItem("Cappuccino");
         return new Cappuccino(preco);
     }
 }
