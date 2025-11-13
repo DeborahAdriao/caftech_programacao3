@@ -8,6 +8,11 @@ public class Latte extends Bebida{
         this.descricao = "Latte";
         this.precoBase = preco;
     }
+
+    public Latte() {
+
+    }
+
     @Override
     public double getCusto() {
         return this.precoBase;
