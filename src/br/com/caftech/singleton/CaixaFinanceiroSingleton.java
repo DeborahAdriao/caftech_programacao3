@@ -27,7 +27,7 @@ public class CaixaFinanceiroSingleton {
     // --- MÉTODOS DE NEGÓCIO (O que o Menu vai usar) ---
 
     public void listarHistorico() {
-        System.out.println("\n--- Histórico de Vendas CafTech ---");
+        System.out.println("\n--- Histórico de Vendas CafTech ---\n");
 
         if (historicoPedidos.isEmpty()) {
             System.out.println(" (Nenhuma venda registrada)");
@@ -37,14 +37,14 @@ public class CaixaFinanceiroSingleton {
                 System.out.println("  " + p.toString());
             }
         }
-        System.out.printf("--- Saldo Total em Caixa: R$ %.2f ---\n", saldoTotal);
+        System.out.printf("\n--- Saldo Total em Caixa: R$ %.2f ---\n", saldoTotal);
     }
     public void registrarPedido(Pedido pedido) {
         historicoPedidos.add(pedido);
         saldoTotal += pedido.getValorTotal();
         salvarHistorico();
 
-        System.out.printf("[Caixa] Venda registrada! Novo saldo: R$ %.2f\n", saldoTotal);
+        System.out.printf("\n[Caixa] Venda registrada! Novo saldo: R$ %.2f\n", saldoTotal);
     }
     // --- MÉTODOS INTERNOS (Persistência e Cálculo) ---
 

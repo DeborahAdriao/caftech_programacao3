@@ -11,17 +11,13 @@ public class Pedido implements Serializable {
     private String metodoPagamento;
     private LocalDateTime dataHora;
 
-    public Pedido(String descricaoBebida, double valorBase, String metodoPagamento){
+    public Pedido(String descricaoBebida, double valorTotalFinal, String metodoPagamento){
         this.descricaoBebida = descricaoBebida;
         this.metodoPagamento = metodoPagamento;
         this.dataHora = LocalDateTime.now();
 
-
-        if (metodoPagamento.equalsIgnoreCase("cartao") || metodoPagamento.equalsIgnoreCase("cartão")){
-            this.valorTotal = valorBase * 2.00;
-        } else {
-            this.valorTotal = valorBase;
-        }
+        //o calculo de acrescimo agora vai ficar no MENU - fazerNovoPedido
+        this.valorTotal = valorTotalFinal;
     }
 
     public double getValorTotal(){
@@ -31,7 +27,7 @@ public class Pedido implements Serializable {
     // metodo para mostrar o historico
     @Override
     public String toString(){
-        return String.format("[%s] %s - Método: %s - Total: R$ %.2f",
+        return String.format("[%s] %s | Método: %s | Total: R$ %.2f",
                 dataHora.toLocalDate(),
                 descricaoBebida,
                 metodoPagamento,

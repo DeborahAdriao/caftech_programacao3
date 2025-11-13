@@ -67,8 +67,7 @@ public class CardapioSingleton {
         double preco = precosItens.getOrDefault(chave, 0.0);
 
         if (preco == 0.0){
-            System.err.println("\"[Cardapio] AVISO: Item '\" + chave + \"' não encontrado no cardápio.");
-        }
+            System.err.println("[Cardapio] AVISO: Item '" + chave + "' não encontrado no cardápio.");        }
         return preco;
     }
 }
