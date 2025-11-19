@@ -1,6 +1,6 @@
 package br.com.caftech.decorator;
 
-public abstract class Bebida {
+public abstract class BebidaAbstrata {
     protected String descricao = "Bebida Desconhecida";
 
     public String getDescricao() {
