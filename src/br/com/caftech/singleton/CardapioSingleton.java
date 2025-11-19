@@ -56,6 +56,7 @@ public class CardapioSingleton {
         precosItens.putIfAbsent("cafe gourmet", 13.00);
         precosItens.putIfAbsent("cappuccino", 9.00);
         precosItens.putIfAbsent("latte", 7.00);
+        precosItens.putIfAbsent("mocca", 10.00);
 
         precosItens.putIfAbsent("baunilha", 0.50);
         precosItens.putIfAbsent("chocolate", 2.00);
